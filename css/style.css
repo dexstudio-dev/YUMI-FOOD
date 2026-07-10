@@ -1,13 +1,28 @@
+/* ==========================================
+   YUMI FOOD WEBSITE
+   style.css
+========================================== */
+
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:#ffffff;
     color:#222;
+    overflow-x:hidden;
+    line-height:1.6;
 }
 
 img{
@@ -23,99 +38,235 @@ ul{
     list-style:none;
 }
 
+button{
+    cursor:pointer;
+    font-family:inherit;
+}
+
 .container{
     width:90%;
     max-width:1200px;
     margin:auto;
 }
 
-/* ===========================
-        HEADER
-=========================== */
+
+/* =========================
+   LOADER
+========================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    border:6px solid #ececec;
+    border-top:6px solid #ff7a00;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 .header{
-    width:100%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
     background:#fff;
-    padding:20px 0;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+    padding:18px 0;
+
 }
 
 .navbar{
+
     display:flex;
-    align-items:center;
+
     justify-content:space-between;
+
+    align-items:center;
+
 }
 
-/* Logo */
+
+/* =========================
+   LOGO
+========================= */
 
 .logo{
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
+
 }
 
 .logo img{
+
     width:60px;
+
 }
 
 .logo h2{
-    font-size:32px;
+
+    font-size:30px;
+
     font-weight:800;
+
     color:#ff7a00;
+
 }
 
-.logo h2 span{
+.logo span{
+
     color:#222;
+
 }
 
 .logo p{
+
+    font-size:13px;
+
     color:#777;
-    font-size:14px;
+
 }
 
-/* Menu */
+
+/* =========================
+   MENU
+========================= */
 
 .menu{
+
     display:flex;
-    gap:45px;
+
+    gap:40px;
+
 }
 
 .menu a{
 
-    color:#222;
-    font-weight:500;
-    transition:.3s;
+    color:#333;
+
+    font-weight:600;
+
     position:relative;
+
+    transition:.3s;
 
 }
 
-.menu a:hover,
-.menu .active{
+.menu a:hover{
 
     color:#ff7a00;
 
 }
 
-.menu .active::after{
+.menu a::after{
 
     content:"";
+
     position:absolute;
 
     left:0;
-    bottom:-10px;
 
-    width:100%;
+    bottom:-8px;
+
+    width:0;
+
     height:3px;
 
     background:#ff7a00;
-    border-radius:50px;
+
+    transition:.3s;
 
 }
 
-/* Button */
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* =========================
+   HEADER ACTION
+========================= */
+
+.header-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+.dark-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#222;
+
+    color:#fff;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.dark-btn:hover{
+
+    transform:rotate(180deg);
+
+}
+
+
+/* =========================
+   ORDER BUTTON
+========================= */
 
 .btn-order{
 
     background:#ff7a00;
+
     color:#fff;
 
     padding:15px 28px;
@@ -123,7 +274,9 @@ ul{
     border-radius:12px;
 
     display:flex;
+
     align-items:center;
+
     gap:10px;
 
     font-weight:600;
@@ -134,24 +287,47 @@ ul{
 
 .btn-order:hover{
 
-    background:#e96f00;
+    background:#ea6c00;
+
+    transform:translateY(-3px);
+
 }
 
-/* ================= HERO ================= */
+
+/* =========================
+   MENU TOGGLE
+========================= */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 
-    padding:70px 0 80px;
-    background:#fff;
+    padding:90px 0;
 
 }
 
 .hero-container{
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
-    gap:50px;
+
+    gap:60px;
 
 }
 
@@ -163,21 +339,27 @@ ul{
 
 .hero-text h4{
 
-    color:#4caf50;
-    font-size:20px;
+    color:#4CAF50;
+
+    font-size:18px;
+
     margin-bottom:20px;
+
+    letter-spacing:2px;
 
 }
 
 .hero-text h1{
 
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:25px;
+    font-size:60px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
 
 }
 
-.hero-text span{
+.hero-text h1 span{
 
     color:#ff7a00;
 
@@ -185,72 +367,90 @@ ul{
 
 .line{
 
-    width:70px;
+    width:80px;
+
     height:4px;
-    background:#4caf50;
+
+    background:#4CAF50;
+
     border-radius:50px;
-    margin-bottom:30px;
+
+    margin-bottom:25px;
 
 }
 
 .hero-text p{
 
-    font-size:20px;
+    font-size:18px;
+
     color:#666;
-    line-height:1.8;
-    margin-bottom:40px;
+
+    margin-bottom:35px;
 
 }
 
 .hero-button{
 
     display:flex;
+
     gap:20px;
-    margin-bottom:60px;
+
+    margin-bottom:45px;
 
 }
 
 .btn-orange{
 
     background:#ff7a00;
+
     color:#fff;
-    padding:18px 35px;
+
+    padding:16px 34px;
+
     border-radius:12px;
+
     font-weight:600;
+
     transition:.3s;
 
 }
 
 .btn-orange:hover{
 
-    background:#ea6e00;
+    background:#ea6c00;
 
 }
 
 .btn-outline{
 
-    border:2px solid #6cb36d;
-    color:#222;
-    padding:18px 35px;
+    border:2px solid #4CAF50;
+
+    color:#4CAF50;
+
+    padding:16px 34px;
+
     border-radius:12px;
+
     font-weight:600;
+
     transition:.3s;
 
 }
 
 .btn-outline:hover{
 
-    background:#6cb36d;
+    background:#4CAF50;
+
     color:#fff;
 
 }
 
-/* Feature */
-
 .hero-feature{
 
     display:flex;
-    gap:40px;
+
+    gap:35px;
+
     flex-wrap:wrap;
 
 }
@@ -258,73 +458,143 @@ ul{
 .feature{
 
     display:flex;
+
     align-items:center;
+
     gap:15px;
 
 }
 
 .feature i{
 
-    color:#4caf50;
+    color:#4CAF50;
+
     font-size:28px;
 
 }
 
 .feature h5{
 
-    font-size:18px;
-    margin-bottom:4px;
+    font-size:17px;
 
 }
 
 .feature span{
 
     color:#777;
+
     font-size:14px;
 
 }
 
-/* Gambar */
-
 .hero-image{
 
     flex:1;
+
     display:flex;
+
     justify-content:flex-end;
 
 }
 
 .hero-image img{
 
+    max-width:600px;
+
     width:100%;
-    max-width:700px;
+}
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.stats{
+
+    padding:80px 0;
+
+    background:#f8f8f8;
 
 }
 
-/*=========================
-        MENU
-=========================*/
+.stats-grid{
 
-.menu-section{
+    display:grid;
 
-    padding:90px 0;
+    grid-template-columns:repeat(4,1fr);
 
-    background:#fafafa;
+    gap:30px;
+
+}
+
+.stat{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat h2{
+
+    color:#ff7a00;
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.stat p{
+
+    color:#777;
+
+    font-size:17px;
+
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
 
 }
 
 .section-subtitle{
 
-    color:#4caf50;
-    text-align:center;
+    color:#4CAF50;
+
+    font-size:18px;
+
     font-weight:600;
+
+    letter-spacing:2px;
 
 }
 
 .section-title{
 
-    text-align:center;
     font-size:42px;
+
     margin:15px 0;
 
 }
@@ -332,12 +602,27 @@ ul{
 .section-line{
 
     width:80px;
+
     height:4px;
-    background:#4caf50;
 
-    margin:20px auto 60px;
+    background:#4CAF50;
 
-    border-radius:50px;
+    margin:20px auto;
+
+    border-radius:30px;
+
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.menu-section{
+
+    padding:90px 0;
+
+    background:#ffffff;
 
 }
 
@@ -355,13 +640,13 @@ ul{
 
     background:#fff;
 
-    border-radius:20px;
+    border-radius:22px;
 
     overflow:hidden;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
@@ -369,63 +654,87 @@ ul{
 
     transform:translateY(-10px);
 
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
 }
 
 .menu-card img{
 
     width:100%;
 
-}
+    height:230px;
 
-.menu-card h3{
+    object-fit:cover;
 
-    padding:20px 20px 10px;
-
-    font-size:26px;
+    transition:.4s;
 
 }
 
-.menu-card span{
+.menu-card:hover img{
 
-    display:block;
+    transform:scale(1.08);
 
-    color:#4caf50;
+}
+
+.menu-content{
+
+    padding:22px;
+
+}
+
+.menu-content h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.menu-content p{
+
+    color:#777;
+
+    margin-bottom:20px;
+
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.price{
+
+    color:#4CAF50;
 
     font-size:24px;
 
     font-weight:700;
 
-    padding:0 20px;
-
 }
 
-.menu-card a{
+.order-btn{
 
-    display:block;
+    background:#ff7a00;
 
-    margin:25px 20px;
+    color:#fff;
 
-    text-align:center;
-
-    border:2px solid #4caf50;
-
-    padding:15px;
+    padding:12px 20px;
 
     border-radius:10px;
-
-    color:#4caf50;
-
-    font-weight:600;
 
     transition:.3s;
 
 }
 
-.menu-card a:hover{
+.order-btn:hover{
 
-    background:#4caf50;
-
-    color:#fff;
+    background:#ea6c00;
 
 }
 
@@ -437,25 +746,20 @@ ul{
 
 }
 
-/*=========================
-        PROMO
-=========================*/
+
+/* ==========================================
+   PROMO
+========================================== */
 
 .promo{
 
-    padding:80px 0;
+    padding:90px 0;
 
-    background:#ffffff;
+    background:#f8fff5;
 
 }
 
 .promo-box{
-
-    background:#f7faef;
-
-    border-radius:25px;
-
-    padding:45px;
 
     display:flex;
 
@@ -463,9 +767,15 @@ ul{
 
     align-items:center;
 
-    gap:40px;
+    gap:35px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
 
@@ -475,9 +785,9 @@ ul{
 
     height:90px;
 
-    border-radius:20px;
+    background:#4CAF50;
 
-    background:#4caf50;
+    color:#fff;
 
     display:flex;
 
@@ -485,13 +795,9 @@ ul{
 
     align-items:center;
 
-}
+    border-radius:20px;
 
-.promo-icon i{
-
-    color:#fff;
-
-    font-size:42px;
+    font-size:38px;
 
 }
 
@@ -503,11 +809,9 @@ ul{
 
 .promo-text h5{
 
-    color:#4caf50;
+    color:#4CAF50;
 
     margin-bottom:10px;
-
-    letter-spacing:1px;
 
 }
 
@@ -515,15 +819,13 @@ ul{
 
     font-size:38px;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 
 }
 
 .promo-text p{
 
-    color:#666;
-
-    font-size:18px;
+    color:#777;
 
 }
 
@@ -531,7 +833,7 @@ ul{
 
     display:flex;
 
-    border:2px solid #4caf50;
+    border:2px solid #4CAF50;
 
     border-radius:12px;
 
@@ -541,7 +843,7 @@ ul{
 
 .voucher span{
 
-    padding:18px 35px;
+    padding:18px 30px;
 
     background:#fff;
 
@@ -555,15 +857,11 @@ ul{
 
     border:none;
 
-    background:#4caf50;
+    background:#4CAF50;
 
     color:#fff;
 
-    padding:18px 30px;
-
-    cursor:pointer;
-
-    font-weight:600;
+    padding:18px 28px;
 
     transition:.3s;
 
@@ -571,19 +869,22 @@ ul{
 
 .voucher button:hover{
 
-    background:#388e3c;
+    background:#3b8b3d;
 
 }
 
-/*=========================
-        FOOTER
-=========================*/
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 .footer{
 
-    background:#ffffff;
+    padding:80px 0 30px;
 
-    padding:70px 0 30px;
+    background:#222;
+
+    color:#fff;
 
 }
 
@@ -593,7 +894,7 @@ ul{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:40px;
+    gap:35px;
 
     margin-bottom:40px;
 
@@ -607,27 +908,33 @@ ul{
 
 .footer-item i{
 
-    font-size:45px;
+    font-size:42px;
 
-    color:#4caf50;
+    color:#ff7a00;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
+
+    transition:.3s;
+
+}
+
+.footer-item:hover i{
+
+    transform:scale(1.15);
 
 }
 
 .footer-item h3{
 
-    margin-bottom:10px;
-
-    font-size:22px;
+    margin-bottom:12px;
 
 }
 
 .footer-item p{
 
-    color:#777;
+    color:#cfcfcf;
 
-    line-height:1.7;
+    font-size:15px;
 
 }
 
@@ -635,7 +942,7 @@ ul{
 
     border:none;
 
-    border-top:1px solid #ddd;
+    border-top:1px solid rgba(255,255,255,.15);
 
     margin-bottom:25px;
 
@@ -645,29 +952,124 @@ ul{
 
     text-align:center;
 
-    color:#777;
+    color:#bfbfbf;
+
+    font-size:14px;
 
 }
 
-/*=========================
-      MENU HAMBURGER
-=========================*/
+/* ==========================================
+   BACK TO TOP
+========================================== */
 
-.menu-toggle{
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff7a00;
+
+    color:#fff;
+
+    font-size:22px;
 
     display:none;
 
-    font-size:30px;
+    justify-content:center;
+
+    align-items:center;
 
     cursor:pointer;
 
+    z-index:999;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
 }
 
-/*=========================
-      RESPONSIVE
-=========================*/
+#topBtn:hover{
 
-@media(max-width:992px){
+    transform:translateY(-5px);
+
+    background:#ea6c00;
+
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+}
+
+body.dark .header{
+
+    background:#2b2b2b;
+
+}
+
+body.dark .hero,
+body.dark .menu-section,
+body.dark .stats,
+body.dark .promo{
+
+    background:#222;
+
+}
+
+body.dark .menu-card,
+body.dark .promo-box,
+body.dark .stat{
+
+    background:#303030;
+
+    color:#fff;
+
+}
+
+body.dark p{
+
+    color:#d0d0d0;
+
+}
+
+body.dark .menu a{
+
+    color:#fff;
+
+}
+
+body.dark .footer{
+
+    background:#111;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width:992px){
 
 .hero-container{
 
@@ -677,19 +1079,25 @@ ul{
 
 }
 
-.hero-feature{
-
-    justify-content:center;
-
-}
-
 .hero-image{
 
     justify-content:center;
 
 }
 
+.hero-feature{
+
+    justify-content:center;
+
+}
+
 .menu-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats-grid{
 
     grid-template-columns:repeat(2,1fr);
 
@@ -711,13 +1119,24 @@ ul{
 
 }
 
-@media(max-width:768px){
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.navbar{
+
+    position:relative;
+
+}
 
 .menu{
 
     position:absolute;
 
-    top:90px;
+    top:80px;
 
     left:0;
 
@@ -725,13 +1144,15 @@ ul{
 
     background:#fff;
 
-    display:none;
-
     flex-direction:column;
 
-    padding:30px;
+    display:none;
+
+    padding:25px;
 
     box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+    z-index:999;
 
 }
 
@@ -753,13 +1174,39 @@ ul{
 
 }
 
+.hero{
+
+    padding:60px 0;
+
+}
+
 .hero-text h1{
 
-    font-size:46px;
+    font-size:42px;
+
+}
+
+.hero-button{
+
+    flex-direction:column;
+
+}
+
+.hero-feature{
+
+    flex-direction:column;
+
+    align-items:center;
 
 }
 
 .menu-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.stats-grid{
 
     grid-template-columns:1fr;
 
@@ -771,212 +1218,130 @@ ul{
 
 }
 
-}
+.promo-box{
 
-/* =========================
-      STICKY NAVBAR
-========================= */
-
-.header{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:999;
-
-    background:#ffffff;
-
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    padding:30px;
 
 }
 
-/* Smooth Scroll */
+.voucher{
 
-html{
-
-    scroll-behavior:smooth;
+    flex-direction:column;
 
 }
 
-/* Hover Card */
-
-.menu-card{
-
-    transition:transform .3s ease, box-shadow .3s ease;
-
-}
-
-.menu-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 18px 35px rgba(0,0,0,.15);
-
-}
-
-/* Hover Button */
-
-.btn-order,
-.btn-orange,
-.btn-outline{
-
-    transition:.3s ease;
-
-}
-
-.btn-order:hover,
-.btn-orange:hover{
-
-    transform:translateY(-3px);
-
-}
-
-.btn-outline:hover{
-
-    transform:translateY(-3px);
-
-}
-
-.menu-card{
-
-    overflow:hidden;
-
-}
-
-.menu-card img{
-
-    transition:.4s;
-
-}
-
-.menu-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.footer-item i{
-
-    transition:.3s;
-
-}
-
-.footer-item:hover i{
-
-    transform:rotate(10deg) scale(1.15);
-
-}
-
-/*=========================
-        STATISTICS
-=========================*/
-
-.stats{
-
-    padding:70px 0;
-
-    background:#f9f9f9;
-
-}
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-}
-
-.stat{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:40px;
+.voucher span{
 
     text-align:center;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.voucher button{
+
+    width:100%;
+
+}
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+.hero-text h1{
+
+    font-size:34px;
+
+}
+
+.section-title{
+
+    font-size:30px;
+
+}
+
+.promo-text h2{
+
+    font-size:28px;
 
 }
 
 .stat h2{
 
-    color:#ff7a00;
-
-    font-size:48px;
+    font-size:36px;
 
 }
 
-.stat p{
+}
 
-    color:#777;
 
-    margin-top:10px;
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.menu-card,
+.stat,
+.footer-item,
+.promo-box{
+
+    transition:all .3s ease;
 
 }
 
-/* =========================
-        DARK MODE
-========================= */
+.footer-item:hover{
 
-.dark-btn{
+    transform:translateY(-5px);
 
-    width:50px;
-    height:50px;
-    border:none;
-    border-radius:50%;
-    background:#222;
-    color:#fff;
-    cursor:pointer;
-    font-size:18px;
-    margin-left:15px;
+}
+
+.feature{
+
     transition:.3s;
 
 }
 
-.dark-btn:hover{
+.feature:hover{
 
-    transform:rotate(180deg);
-
-}
-
-body.dark{
-
-    background:#1f1f1f;
-    color:#ffffff;
+    transform:translateX(5px);
 
 }
 
-body.dark .header,
-body.dark .menu-card,
-body.dark .promo-box,
-body.dark .stat,
-body.dark .footer{
 
-    background:#2c2c2c;
-    color:#ffffff;
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
 
-}
+::-webkit-scrollbar{
 
-body.dark p{
-
-    color:#d8d8d8;
+    width:10px;
 
 }
 
-body.dark .menu a{
+::-webkit-scrollbar-track{
 
-    color:#ffffff;
+    background:#f1f1f1;
 
 }
 
-<button id="topBtn">
+::-webkit-scrollbar-thumb{
 
-<i class="fa-solid fa-arrow-up"></i>
+    background:#ff7a00;
 
-</button>
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ea6c00;
+
+}

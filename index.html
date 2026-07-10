@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YUMI FOOD | Makanan Enak Harga Bersahabat</title>
 
     <meta name="description" content="YUMI FOOD menyediakan makanan lezat dengan harga terjangkau.">
 
-<meta name="keywords" content="YUMI FOOD, makanan, restoran, kuliner, delivery">
+    <meta name="keywords" content="YUMI FOOD, makanan, restoran, kuliner">
 
-<meta name="author" content="YUMI FOOD">
+    <meta name="author" content="Dex Studio">
 
-    <title>YUMI FOOD</title>
+    <meta property="og:title" content="YUMI FOOD">
+
+    <meta property="og:description" content="Makanan Enak Harga Bersahabat">
+
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="assets/logo.png">
 
     <!-- Google Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- AOS -->
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+
+<!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <div class="spinner"></div>
+
+</div>
 
 <!-- ================= HEADER ================= -->
 
@@ -36,57 +63,59 @@
 
     <div class="container navbar">
 
-        <!-- Logo -->
         <div class="logo">
 
             <img src="assets/logo.png" alt="Logo" loading="lazy">
 
             <div class="logo-text">
+
                 <h2>YUMI <span>FOOD</span></h2>
-                <p>Enak, Praktis, Bersahabat</p>
+
+                <p>Enak • Praktis • Bersahabat</p>
+
             </div>
 
         </div>
 
-        <!-- Menu -->
-
         <nav>
 
-        <ul class="menu">
+            <ul class="menu">
 
-    <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#beranda">Beranda</a></li>
 
-    <li><a href="#menu">Menu</a></li>
+                <li><a href="#menu">Menu</a></li>
 
-    <li><a href="#promo">Promo</a></li>
+                <li><a href="#promo">Promo</a></li>
 
-    <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
 
-    <li><a href="#kontak">Kontak</a></li>
-
-</ul>
+            </ul>
 
         </nav>
 
-        <div class="menu-toggle">
-
-    <i class="fa-solid fa-bars"></i>
-
-</div>
-
-        <!-- Button -->
-
-        <a href="#" class="btn-order">
+        <div class="header-action">
 
             <button id="darkModeBtn" class="dark-btn">
-    <i class="fa-solid fa-moon"></i>
-</button>
 
-            <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-solid fa-moon"></i>
 
-            Pesan Sekarang
+            </button>
 
-        </a>
+            <a href="#menu" class="btn-order">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                Pesan Sekarang
+
+            </a>
+
+            <div class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -94,21 +123,21 @@
 
 <!-- ================= HERO ================= -->
 
-<section id="beranda" class="hero" data-aos="fade-up"></section>
+<section id="beranda" class="hero" data-aos="fade-up">
 
     <div class="container hero-container">
 
-        <!-- Kiri -->
-
         <div class="hero-text">
 
-            <h4>YUMI FOOD</h4>
+            <h4>SELAMAT DATANG DI</h4>
 
             <h1>
 
-                Makanan Enak,<br>
+                YUMI FOOD
 
-                Harga <span>Bersahabat</span>
+                <br>
+
+                <span>Makanan Enak & Harga Bersahabat</span>
 
             </h1>
 
@@ -116,28 +145,27 @@
 
             <p>
 
-                Kami menyediakan berbagai pilihan makanan lezat
-                yang dibuat dengan bahan berkualitas dan penuh cinta.
+                Nikmati berbagai pilihan makanan dan minuman favorit
+                dengan kualitas terbaik, harga terjangkau,
+                dan pelayanan yang cepat.
 
             </p>
 
             <div class="hero-button">
 
-                <a href="#" class="btn-orange">
-
-                    Pesan Sekarang
-
-                </a>
-
-                <a href="#" class="btn-outline">
+                <a href="#menu" class="btn-orange">
 
                     Lihat Menu
 
                 </a>
 
-            </div>
+                <a href="#promo" class="btn-outline">
 
-            <!-- Feature -->
+                    Promo Hari Ini
+
+                </a>
+
+            </div>
 
             <div class="hero-feature">
 
@@ -147,23 +175,9 @@
 
                     <div>
 
-                        <h5>Pengiriman Cepat</h5>
+                        <h5>Fast Delivery</h5>
 
-                        <span>Sampai tujuan</span>
-
-                    </div>
-
-                </div>
-
-                <div class="feature">
-
-                    <i class="fa-solid fa-shield-heart"></i>
-
-                    <div>
-
-                        <h5>Bahan Berkualitas</h5>
-
-                        <span>Segar & Higienis</span>
+                        <span>Pengiriman Cepat</span>
 
                     </div>
 
@@ -171,13 +185,27 @@
 
                 <div class="feature">
 
-                    <i class="fa-solid fa-sack-dollar"></i>
+                    <i class="fa-solid fa-leaf"></i>
 
                     <div>
 
-                        <h5>Harga Terjangkau</h5>
+                        <h5>Fresh Food</h5>
 
-                        <span>Bersahabat</span>
+                        <span>Bahan Berkualitas</span>
+
+                    </div>
+
+                </div>
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <div>
+
+                        <h5>Best Quality</h5>
+
+                        <span>Rasa Terbaik</span>
 
                     </div>
 
@@ -186,8 +214,6 @@
             </div>
 
         </div>
-
-        <!-- Kanan -->
 
         <div class="hero-image">
 
@@ -199,27 +225,29 @@
 
 </section>
 
+<!-- ================= STATISTICS ================= -->
+
 <section class="stats">
 
     <div class="container stats-grid">
 
-        <div class="stat">
+        <div class="stat" data-aos="fade-up">
 
             <h2>15K+</h2>
 
-            <p>Pelanggan</p>
+            <p>Pelanggan Puas</p>
 
         </div>
 
-        <div class="stat">
+        <div class="stat" data-aos="fade-up" data-aos-delay="100">
 
             <h2>50+</h2>
 
-            <p>Menu</p>
+            <p>Menu Pilihan</p>
 
         </div>
 
-        <div class="stat">
+        <div class="stat" data-aos="fade-up" data-aos-delay="200">
 
             <h2>99%</h2>
 
@@ -227,7 +255,7 @@
 
         </div>
 
-        <div class="stat">
+        <div class="stat" data-aos="fade-up" data-aos-delay="300">
 
             <h2>24/7</h2>
 
@@ -241,85 +269,169 @@
 
 <!-- ================= MENU ================= -->
 
-<section id="menu" class="menu-section" data-aos="fade-up"></section>
+<section id="menu" class="menu-section">
 
     <div class="container">
 
-        <h4 class="section-subtitle">
+        <div class="section-header" data-aos="fade-up">
 
-            MENU FAVORIT
+            <h4 class="section-subtitle">
 
-        </h4>
+                MENU FAVORIT
 
-        <h2 class="section-title">
+            </h4>
 
-            Pilihan Menu Terbaik
+            <h2 class="section-title">
 
-        </h2>
+                Pilihan Menu Terbaik
 
-        <div class="section-line"></div>
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
 
         <div class="menu-grid">
 
             <!-- Card 1 -->
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="zoom-in">
 
-                <img src="assets/ayam-geprek.png" alt="Ayam Geprek" loading="lazy">
+                <img src="assets/ayam-geprek.png"
+                    alt="Ayam Geprek"
+                    loading="lazy">
 
-                <h3>Nasi Ayam Geprek</h3>
+                <div class="menu-content">
 
-                <span>Rp 20.000</span>
+                    <h3>Nasi Ayam Geprek</h3>
 
-                <a href="#">Pesan</a>
+                    <p>
+                        Ayam geprek crispy dengan sambal pilihan.
+                    </p>
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            Rp20.000
+                        </span>
+
+                        <a href="#" class="order-btn">
+
+                            Pesan
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
             <!-- Card 2 -->
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="100">
 
-                <img src="assets/mie-goreng.png" alt="Mie Goreng" loading="lazy">
+                <img src="assets/mie-goreng.png"
+                    alt="Mie Goreng"
+                    loading="lazy">
 
-                <h3>Mie Goreng Spesial</h3>
+                <div class="menu-content">
 
-                <span>Rp 18.000</span>
+                    <h3>Mie Goreng Spesial</h3>
 
-                <a href="#">Pesan</a>
+                    <p>
+                        Mie goreng dengan topping lengkap.
+                    </p>
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            Rp18.000
+                        </span>
+
+                        <a href="#" class="order-btn">
+
+                            Pesan
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
             <!-- Card 3 -->
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="200">
 
-                <img src="assets/chicken-katsu.png" alt="Chicken Katsu" loading="lazy">
+                <img src="assets/chicken-katsu.png"
+                    alt="Chicken Katsu"
+                    loading="lazy">
 
-                <h3>Chicken Katsu</h3>
+                <div class="menu-content">
 
-                <span>Rp 22.000</span>
+                    <h3>Chicken Katsu</h3>
 
-                <a href="#">Pesan</a>
+                    <p>
+                        Chicken katsu renyah dengan saus spesial.
+                    </p>
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            Rp22.000
+                        </span>
+
+                        <a href="#" class="order-btn">
+
+                            Pesan
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
             <!-- Card 4 -->
 
-            <div class="menu-card">
+            <div class="menu-card" data-aos="zoom-in" data-aos-delay="300">
 
-                <img src="assets/thai-tea.png" alt="Thai Tea" loading="lazy">
+                <img src="assets/thai-tea.png"
+                    alt="Thai Tea"
+                    loading="lazy">
 
-                <h3>Es Thai Tea</h3>
+                <div class="menu-content">
 
-                <span>Rp 8.000</span>
+                    <h3>Thai Tea</h3>
 
-                <a href="#">Pesan</a>
+                    <p>
+                        Minuman segar dengan rasa khas Thailand.
+                    </p>
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            Rp8.000
+                        </span>
+
+                        <a href="#" class="order-btn">
+
+                            Pesan
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-        <div class="menu-button">
+        <div class="menu-button" data-aos="fade-up">
 
             <a href="#" class="btn-outline">
 
@@ -335,13 +447,11 @@
 
 <!-- ================= PROMO ================= -->
 
-<section id="promo" class="promo" data-aos="zoom-in"></section>
+<section id="promo" class="promo">
 
     <div class="container">
 
-        <div class="promo-box">
-
-            <!-- Icon -->
+        <div class="promo-box" data-aos="zoom-in">
 
             <div class="promo-icon">
 
@@ -349,28 +459,32 @@
 
             </div>
 
-            <!-- Text -->
-
             <div class="promo-text">
 
                 <h5>PROMO SPESIAL</h5>
 
-                <h2>Diskon 20%<br>Untuk Pesanan Pertamamu!</h2>
+                <h2>Diskon 20% Untuk Pesanan Pertama</h2>
 
                 <p>
-                    Gunakan kode voucher berikut saat checkout.
+
+                    Gunakan voucher di bawah ini saat checkout.
+
                 </p>
 
             </div>
 
-            <!-- Voucher -->
-
             <div class="voucher">
 
-                <span id="kodeVoucher">YUMIFOOD20</span>
+                <span id="kodeVoucher">
+
+                    YUMIFOOD20
+
+                </span>
 
                 <button onclick="copyVoucher()">
+
                     Salin Kode
+
                 </button>
 
             </div>
@@ -383,7 +497,7 @@
 
 <!-- ================= FOOTER ================= -->
 
-<footer id="kontak" class="footer" data-aos="fade-up"></footer>
+<footer id="kontak" class="footer">
 
     <div class="container">
 
@@ -393,9 +507,13 @@
 
                 <i class="fa-solid fa-headset"></i>
 
-                <h3>Layanan 24/7</h3>
+                <h3>Layanan 24 Jam</h3>
 
-                <p>Kami siap membantu kapan saja.</p>
+                <p>
+
+                    Siap membantu setiap hari.
+
+                </p>
 
             </div>
 
@@ -405,27 +523,39 @@
 
                 <h3>Pembayaran Aman</h3>
 
-                <p>Transaksi 100% aman dan terpercaya.</p>
+                <p>
+
+                    Berbagai metode pembayaran.
+
+                </p>
 
             </div>
 
             <div class="footer-item">
 
-                <i class="fa-solid fa-box"></i>
+                <i class="fa-solid fa-box-open"></i>
 
-                <h3>Kemasan Rapi</h3>
+                <h3>Kemasan Higienis</h3>
 
-                <p>Makanan dikemas higienis dan aman.</p>
+                <p>
+
+                    Dikemas rapi dan bersih.
+
+                </p>
 
             </div>
 
             <div class="footer-item">
 
-                <i class="fa-regular fa-face-smile"></i>
+                <i class="fa-solid fa-face-smile"></i>
 
-                <h3>Kepuasan Terjamin</h3>
+                <h3>Kepuasan Pelanggan</h3>
 
-                <p>Kepuasan pelanggan adalah prioritas kami.</p>
+                <p>
+
+                    Prioritas utama kami.
+
+                </p>
 
             </div>
 
@@ -435,7 +565,11 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 YUMI FOOD. All Rights Reserved.</p>
+            <p>
+
+                © 2026 YUMI FOOD • Dibuat dengan ❤️ menggunakan HTML, CSS & JavaScript.
+
+            </p>
 
         </div>
 
@@ -443,24 +577,34 @@
 
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init({
-    duration:1000,
-    once:true
-});
-</script>
-
-<!-- Javascript -->
-
-<script src="js/script.js"></script>
+<!-- ================= BACK TO TOP ================= -->
 
 <button id="topBtn">
 
-<i class="fa-solid fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
 
 </button>
 
+<!-- ================= AOS ================= -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+
+    duration:900,
+
+    once:true
+
+});
+
+</script>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/script.js"></script>
+
 </body>
+
 </html>
