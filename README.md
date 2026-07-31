@@ -1,6 +1,5 @@
 # 🍜 YUMI FOOD
 
-Website restoran modern menggunakan HTML, CSS dan JavaScript.
 
 ## Fitur
 
